@@ -11,10 +11,12 @@ return new class extends Migration
         Schema::create('categories', function (Blueprint $table) {
             $table->increments('id');
             $table->string('name');
+            // $table->string('jenis');
+            // $table->string('kode');
             $table->timestamps();
         });
     }
-
+    
     public function down(): void
     {
         Schema::dropIfExists('categories');

@@ -12,7 +12,12 @@ class BarangMasuk extends Model
     protected $table = 'barang_masuk';
 
     protected $fillable = [
-        'item_id', 'jumlah_masuk', 'tanggal_masuk', 'no_surat_jalan', 'keterangan', 'jumlah_per_palet'
+        'item_id', 
+        'jumlah_masuk', 
+        'tanggal_masuk', 
+        'no_surat_jalan', 
+        'keterangan', 
+        'jumlah_per_palet'
     ];
 
     public function item()

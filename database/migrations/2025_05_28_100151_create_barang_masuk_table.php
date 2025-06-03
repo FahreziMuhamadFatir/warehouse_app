@@ -10,15 +10,15 @@ return new class extends Migration
     {
         Schema::create('barang_masuk', function (Blueprint $table) {
             $table->increments('id');
-            $table->unsignedInteger('item_id');
-            $table->integer('jumlah_masuk');
+            // $table->unsignedInteger('item_id');
+            // $table->integer('jumlah_masuk');
             $table->date('tanggal_masuk');
-            $table->string('no_surat_jalan', 100)->nullable();
-            $table->text('keterangan')->nullable();
-            $table->integer('jumlah_per_palet')->nullable();
-            $table->timestamps();
+            $table->string('summary', 100)->nullable();
+            // $table->text('keterangan')->nullable();
+            // $table->integer('jumlah_per_palet')->nullable();
+            // $table->timestamps();
 
-            $table->foreign('item_id')->references('id')->on('items')->onDelete('cascade');
+            // $table->foreign('item_id')->references('id')->on('items')->onDelete('cascade');
         });
     }
 

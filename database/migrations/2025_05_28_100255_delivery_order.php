@@ -12,8 +12,11 @@ return new class extends Migration
             $table->increments('id');
             $table->string('no_do')->unique();
             $table->date('tanggal');
+            $table->enum('tujuan', ['Stok', 'Jual', 'dll']);
+            $table->enum('status_pengambilan', ['Sudah', 'Belum']->default('Belum'));
+            $table->string('keterangan');
             $table->timestamps();
-        });
+        });     
     }
 
     public function down(): void

@@ -15,13 +15,7 @@
             </tr>
         </thead>
         <tbody>
-            @foreach($data as $barang)
-                <tr>
-                    <td>{{ $barang->id }}</td>
-                    <td>{{ $barang->nama }}</td>
-                    <td>{{ $barang->stok }}</td>
-                </tr>
-            @endforeach
+           
         </tbody>
     </table>
 </body>

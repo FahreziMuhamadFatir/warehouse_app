@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ItemController;
 use App\Http\Controllers\BarangMasukController;
+use App\Http\Controllers\CategoryController;
 
 /*
 |--------------------------------------------------------------------------
@@ -21,3 +22,5 @@ Route::get('/', function () {
 
 Route::resource('items', ItemController::class);
 Route::resource('barang-masuk', BarangMasukController::class);
+
+Route::resource('category', CategoryController::class);
