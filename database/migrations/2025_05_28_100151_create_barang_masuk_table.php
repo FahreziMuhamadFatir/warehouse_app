@@ -13,7 +13,7 @@ return new class extends Migration
             $table->unsignedInteger('item_id');
             $table->integer('jumlah_masuk');
             $table->date('tanggal_masuk');
-            $table->string('no_surat_jalan', 100)->nullable();
+            $table->string('summary', 100)->nullable();
             $table->text('keterangan')->nullable();
             $table->integer('jumlah_per_palet')->nullable();
             $table->timestamps();

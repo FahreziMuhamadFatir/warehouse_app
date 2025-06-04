@@ -12,7 +12,7 @@ return new class extends Migration
             $table->increments('id');
             $table->unsignedInteger('category_id');
             $table->string('nama_barang');
-            $table->string('kode_barang')->unique();
+            $table->integer('ketebalan_barang');
             $table->timestamps();
 
             // foreign key ke tabel categories

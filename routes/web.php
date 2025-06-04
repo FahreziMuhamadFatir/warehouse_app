@@ -3,7 +3,8 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ItemController;
 use App\Http\Controllers\BarangMasukController;
-
+use App\Http\Controllers\CategoryController;
+use App\Http\Controllers\DashboardController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -20,4 +21,6 @@ Route::get('/', function () {
 });
 
 Route::resource('items', ItemController::class);
-Route::resource('barang-masuk', BarangMasukController::class);
+Route::resource('barang_masuk', BarangMasukController::class);
+Route::resource('category', CategoryController::class);
+Route::get('/dashboard', [DashboardController::class, 'index'])->name('dashboard');

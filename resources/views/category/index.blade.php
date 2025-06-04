@@ -2,12 +2,12 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Data Items</title>
+    <title>CATEGORY</title>
 </head>
 <body>
-    <h1>Daftar Item</h1>
+    <h1>Daftar Category</h1> <hr>
 
-    <a href="{{ route('items.create') }}">Tambah Item</a>
+    <a href="{{ route('category.create') }}">Tambah Category</a>
     <br><br>
 
     @if (session('success'))
@@ -19,21 +19,21 @@
             <tr>
                 <th>ID</th>
                 <th>Nama</th>
-                <th>Kategori</th>
-                <th>Ketebalan barang (mm)</th>
+                <th>Jenis</th>
+                <th>Kode</th>
                 <th>Aksi</th>
             </tr>
         </thead>
         <tbody>
-            @foreach ($items as $item)
+            @foreach ($category as $cate)
             <tr>
-                <td>{{ $item->id }}</td>
-                <td>{{ $item->nama_barang }}</td>
-                <td>{{ $item->category->name ?? '-' }}</td>
-                <td>{{ $item->ketebalan_barang }}</td>
+                <td>{{ $cate->id }}</td>
+                <td>{{ $cate->name }}</td>
+                <td>{{ $cate->jenis }}</td>
+                <td>{{ $cate->kode }}</td>
                 <td>
-                    <a href="{{ route('items.edit', $item->id) }}">Edit</a> |
-                    <form action="{{ route('items.destroy', $item->id) }}" method="POST" style="display:inline;">
+                    <a href="{{ route('category.edit', $cate->id) }}">Edit</a> |
+                    <form action="{{ route('category.destroy', $cate->id) }}" method="POST" style="display:inline;">
                         @csrf
                         @method('DELETE')
                         <button type="submit" onclick="return confirm('Yakin hapus?')">Hapus</button>

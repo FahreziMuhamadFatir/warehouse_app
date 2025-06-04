@@ -2,23 +2,28 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Tambah Item</title>
+    <title>WAREHOUSE</title>
 </head>
 <body>
-    <h1>Tambah Item</h1>
+    <h1>FORM ADD ITEM</h1>
 
     <form action="{{ route('items.store') }}" method="POST">
         @csrf
-       <label>Nama:</label><br>
+        <label>Nama:</label><br>
         <input type="text" name="nama_barang"><br><br>
 
-        <label>Category ID:</label><br>
-        <input type="number" name="category_id"><br><br>
+        <label for="category_id">Category:</label><br>
+        <select name="category_id" id="category_id">
+        <option value="">-- Pilih Kategori --</option>
+            @foreach($categories as $category)
+                <option value="{{ $category->id }}">{{ $category->name }}</option>
+            @endforeach
+            </select><br><br>
 
-        <label>Kode Barang:</label><br>
-        <input type="number" name="kode_barang"><br><br>
+        <label>Ketebalan Barang:</label><br>
+        <input type="number" name="ketebalan_barang"><br><br>
 
-        <button type="submit">Simpan</button>
+        <button type="submit" name="submit">SAVE</button>
     </form>
 
     <br>

@@ -13,11 +13,17 @@
         <label>Nama:</label><br>
         <input type="text" name="nama_barang" value="{{ $item->nama_barang }}"><br><br>
 
-        <label>Kategori ID:</label><br>
-        <input type="number" name="category_id" value="{{ $item->category_id }}"><br><br>
-
+        <label>Kategori:</label><br>
+        <select name="category_id">
+            <option value="">-- Pilih Kategori --</option>
+            @foreach ($categories as $category)
+            <option value="{{ $category->id }}" {{ $item->category_id == $category->id ? 'selected' : '' }}>
+            {{ $category->name }}
+            </option>
+            @endforeach
+            </select><br><br>
         <label>kode barang</label><br>
-        <input type="number" name="kode_barang" value="{{ $item->kode_barang }}"><br><br>
+        <input type="number" name="ketebalan_barang" value="{{ $item->ketebalan_barang }}"><br><br>
 
         <button type="submit">Update</button>
     </form>
