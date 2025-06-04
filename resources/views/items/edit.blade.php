@@ -11,10 +11,10 @@
         @csrf
         @method('PUT')
         <label>Nama:</label><br>
-        <input type="text" name="nama" value="{{ $item->nama_barang }}"><br><br>
+        <input type="text" name="nama_barang" value="{{ $item->nama_barang }}"><br><br>
 
         <label>Kategori ID:</label><br>
-        <input type="number" name="kategori_id" value="{{ $item->category_id }}"><br><br>
+        <input type="number" name="category_id" value="{{ $item->category_id }}"><br><br>
 
         <label>kode barang</label><br>
         <input type="number" name="kode_barang" value="{{ $item->kode_barang }}"><br><br>

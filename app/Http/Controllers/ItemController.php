@@ -24,7 +24,7 @@ public function create()
 public function store(Request $request)
 {
     $request->validate([
-        'nama' => 'required|string|max:255',
+        'nama_barang' => 'required|string|max:255',
         'category_id' => 'required|integer',
         'kode_barang' => 'required|integer'
     ]);
@@ -49,7 +49,7 @@ public function edit($id)
 public function update(Request $request, $id)
 {
     $request->validate([
-        'nama' => 'required|string|max:255',
+        'nama_barang' => 'required|string|max:255',
         'category_id' => 'required|integer',
         'kode_barang' => 'required|integer'
     ]);

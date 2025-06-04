@@ -12,6 +12,6 @@ class Item extends Model
     protected $fillable = [
         'nama_barang',
         'category_id',
-        'kode_barang',
+        'kode_barang'
     ];
 }
