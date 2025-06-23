@@ -23,6 +23,9 @@
         <label>Ketebalan Barang:</label><br>
         <input type="number" name="ketebalan_barang"><br><br>
 
+        <label>Jumlah per Palet:</label><br>
+        <input type="number" name="jumlah_per_palet" value="{{ old('jumlah_per_palet', $item->jumlah_per_palet ?? '') }}"><br><br>
+
         <button type="submit" name="submit">SAVE</button>
     </form>
 

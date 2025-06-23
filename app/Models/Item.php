@@ -12,6 +12,7 @@ class Item extends Model
     // Kolom yang boleh diisi (fillable) lewat mass assignment
     protected $fillable = [
         'nama_barang',
+        'jumlah_per_palet',
         'category_id',
         'ketebalan_barang'
     ];

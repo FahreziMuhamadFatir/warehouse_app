@@ -3,25 +3,61 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dashboard - warehouse</title>
+    <title>Dashboard - Warehouse</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <style>
-        .hover-animate {
-            transition: all 0.3s ease;
+        body {
+            margin: 0;
+            font-family: 'Segoe UI', sans-serif;
+            background-color: #f8f9fa;
         }
-        .hover-animate:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+
+        .sidebar {
+            width: 250px;
+            min-height: 100vh;
+            background: linear-gradient(135deg, #007bff, #0056b3);
+            color: white;
+            padding: 20px;
+        }
+
+        .sidebar a {
+            color: white;
+            display: block;
+            padding: 10px 15px;
+            border-radius: 8px;
+            text-decoration: none;
+            margin-bottom: 10px;
+            transition: background-color 0.3s ease;
+        }
+
+        .sidebar a:hover {
+            background-color: rgba(255,255,255,0.15);
+        }
+
+        .sidebar h2 {
+            font-size: 1.5rem;
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .content-wrapper {
+            flex-grow: 1;
+            padding: 30px;
+            overflow-x: hidden;
         }
     </style>
 </head>
 <body>
     <div class="d-flex">
-        @include('partials.sidebar')
-        <main class="flex-fill p-4">
+        <div class="sidebar flex-shrink-0">
+            @include('partials.sidebar')
+        </div>
+
+        <div class="content-wrapper">
             @yield('content')
-        </main>
+        </div>
     </div>
+
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>

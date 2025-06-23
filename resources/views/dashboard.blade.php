@@ -23,7 +23,7 @@ $menu = [
         'Category' => route('category.index'),
         'Item' => route('items.index'),
         'Barang Masuk' => route('barang_masuk.index'),
-        'Barang Keluar' => '#',
+        'Barang Keluar' => route('delivery_order.index'),
     ];
 @endphp
 

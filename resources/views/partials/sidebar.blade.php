@@ -1,16 +1,7 @@
-<div class="bg-white shadow-sm p-3 vh-100" style="width: 250px;">
-    <h2 class="mb-4 text-primary">WAREHOUSE</h2>
-    <ul class="nav flex-column">
-        <li class="nav-item mb-2">
-            <a href="#" class="nav-link text-dark hover-animate">
-                <i class="bi bi-speedometer2 me-2"></i> Dashboard
-            </a>
-        </li>
-        <li class="nav-item mb-2">
-            <a href="#" class="nav-link text-dark hover-animate">
-                <i class="bi bi-people-fill me-2"></i> Report
-            </a>
-        </li>
-        <!-- Add more menu items -->
-    </ul>
-</div>
+<h2>WAREHOUSE</h2>
+<a href="{{ route('dashboard') }}">🏠 Dashboard</a>
+<a href="{{ route('barang_masuk.index') }}">📦 Barang Masuk</a>
+<a href="{{ route('delivery_order.index') }}">🚚 Delivery Order</a>
+<a href="{{ route('items.index') }}">🧾 Items</a>
+<a href="{{ route('category.index') }}">📂 Category</a>
+<a href="{{ route('stok.index') }}">📊 Stok</a>

@@ -13,7 +13,7 @@ class ItemController extends Controller
      */
     public function index()
     {
-        $items = Item::with('category')->get();
+        $items = Item::with('category')->paginate(10);
         return view('items.index', compact('items'));
     }
 
@@ -28,6 +28,7 @@ public function store(Request $request)
 {
     $request->validate([
         'nama_barang' => 'required|string|max:255',
+        'jumlah_per_palet' => 'nullable|integer|min:1',
         'category_id' => 'required|integer',
         'ketebalan_barang' => 'required|integer'
     ]);
@@ -54,6 +55,7 @@ public function update(Request $request, $id)
 {
     $request->validate([
         'nama_barang' => 'required|string|max:255',
+        'jumlah_per_palet' => 'nullable|integer|min:1',
         'category_id' => 'required|integer',
         'ketebalan_barang' => 'required|integer'
     ]);
